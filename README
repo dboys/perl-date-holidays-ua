@@ -78,9 +78,9 @@ SUBROUTINES/METHODS
     As is_holiday, but accepts a DateTime object in place of a numeric
     year, month, and day.
 
-        $holiday_p = is_holiday($dt, {language => 'en'});
+        $holiday_p = is_holiday_dt($dt, {language => 'en'});
     
-        $holiday_p = $ua->is_holiday($dt);
+        $holiday_p = $ua->is_holiday_dt($dt);
 
  is_ua_holiday()
 

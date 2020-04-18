@@ -37,7 +37,7 @@ print join("\n", value(%$calendar)); # list of holiday names for Ukraine
 
 ## Subroutines/Methods
 
-### New()
+### new()
 
 Create a new Date::Holidays::UA object. Parameters should be given as
 a hashref of key-value pairs.
@@ -52,7 +52,7 @@ my $ua = Date::Holidays::UA->new({
 
 One parameters can be specified: **language**.
 
-### Is\_Holiday()
+### is\_holiday()
 
 For a given year, month (1-12) and day (1-31), return 1 if the given
 day is a holiday; 0 if not.  When using procedural calling style, an
@@ -68,18 +68,18 @@ $holiday_p = is_holiday($year, $month, $day, {
 $holiday_p = $ua->is_holiday($year, $month, $day);
 ```
 
-### Is\_Holiday\_Dt()
+### is\_holiday\_dt()
 
 As is\_holiday, but accepts a DateTime object in place of a numeric year,
 month, and day.
 
 ```perl
-$holiday_p = is_holiday($dt, {language => 'en'});
+$holiday_p = is_holiday_dt($dt, {language => 'en'});
 
-$holiday_p = $ua->is_holiday($dt);
+$holiday_p = $ua->is_holiday_dt($dt);
 ```
 
-### Is\_Ua\_Holiday()
+### is\_ua\_holiday()
 
 Similar to `is_holiday`. Return the name of the holiday occurring on
 the specified date if there is one; `undef` if there isn't.
@@ -88,7 +88,7 @@ the specified date if there is one; `undef` if there isn't.
 print $ua->is_ua_holiday(2020, 1, 1); # "New Year"
 ```
 
-### Holidays()
+### holidays()
 
 For the given year, return a hashref containing all the holidays for
 that year.  The keys are the date of the holiday in `mmdd` format
@@ -102,11 +102,11 @@ my $calendar = $ua->holidays($year);
 print $calendar->{'0628'}; # "Constitution Day"
 ```
 
-### Ua\_Holidays()
+### ua\_holidays()
 
 Same as `holidays()`.
 
-### Holidays\_Dt()
+### holidays\_dt()
 
 Similar to `holidays()`, The keys are the date of the holiday in `mmdd` format
 (eg '1225' for December 25); and DateTime objects as the values.
