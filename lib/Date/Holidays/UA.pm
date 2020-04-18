@@ -97,8 +97,6 @@ a hashref of key-value pairs.
 
 One parameters can be specified: B<language>.
 
-=back
-
 =cut
 
 sub new {
