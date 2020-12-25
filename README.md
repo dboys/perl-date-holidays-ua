@@ -4,7 +4,7 @@ Date::Holidays::UA - Holidays module for Ukraine
 
 ## Version
 
-Version 0.01
+Version 0.02
 
 ## Synopsis
 
